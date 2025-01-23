@@ -41,3 +41,12 @@ Multimethods allow more complex dispatching
 (= "Bambi eats veggies." (diet {:species "deer", :name "Bambi", :age 1, :eater :herbivore}))
 ```
 And first impressions - a functional language with a lot of parentheses.
+
+## Day 2
+I still don't know what a symbol is. Why is `"c"` a symbol?
+```
+(meditations
+  "One may know what they seek by knowing what they do not seek"
+  (= [true false true] (let [not-a-symbol? (complement symbol?)]
+                  (map not-a-symbol? [:a 'b "c"])))
+```
