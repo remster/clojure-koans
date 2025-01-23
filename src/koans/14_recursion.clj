@@ -20,12 +20,17 @@
   )
 )
 
-(defn factorial [n]
-  (if (= n 1)
-    1
-    (* (factorial (dec n)) n)
-  )
-)
+(def factorial
+  (fn [n]
+    (loop [cnt n
+           acc 1]
+       (if (zero? cnt)
+            acc
+          (recur (dec cnt) (* acc cnt))
+; copied from https://clojuredocs.org/clojure.core/recur
+; as i can't work out this 'loop' statement
+))))
+
 
 (meditations
   "Recursion ends with a base case"
