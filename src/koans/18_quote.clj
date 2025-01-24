@@ -22,4 +22,4 @@
   (= (list 1 2 3) `(1 2 3) '(1 2 3))
 
   "Unquote (~) within a syntax-quoted expression lets you mark specific expressions as requiring evaluation"
-  (= (list '(1 5) '(1 5)) `(1 ~(+ 2 3)) '(1 5)))
+  (= '(1 5) `(1 ~(+ 2 3)) '(1 5)))
